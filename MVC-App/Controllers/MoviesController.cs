@@ -25,6 +25,11 @@ namespace MVC_App.Controllers
             return Content("id=" + id);
         }
 
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year + "/" + month);
+        }
+
         public ActionResult Index(int? pageIndex, string sortBy)
         {
             if(!pageIndex.HasValue)
